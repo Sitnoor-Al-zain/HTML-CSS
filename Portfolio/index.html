@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitnoor | Digital Garden Portfolio</title>
+    <style>
+        /* --- Unique Theme: Glassmorphism & Nature --- */
+        * { box-sizing: border-box; font-family: 'Georgia', serif; }
+        
+        body { 
+            margin: 0; 
+            background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+            color: #2d3436;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Fixed Navbar Section --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(45, 52, 54, 0.9); /* Background color */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav li { display: inline; margin: 0 30px; }
+        nav a {
+            text-decoration: none;
+            color: #55efc4; /* Font color */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: 0.4s;
+        }
+        nav a:hover {
+            color: #fab1a0; /* Hover effect */
+            border-bottom: 2px solid #fab1a0;
+        }
+
+        /* --- Hero Section: Video Background with Text Overlay --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            filter: brightness(0.7);
+        }
+        .hero-content {
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- Image Styling Section --- */
+        .profile-box {
+            text-align: center; /* Center the image */
+            padding: 80px 20px;
+        }
+        .profile-img {
+            width: 250px;
+            border-radius: 125px 0 125px 0; /* Unique Rounded edges */
+            filter: grayscale(100%) sepia(20%); /* CSS Filter */
+            transition: 0.5s;
+            border: 8px solid #55efc4;
+        }
+        .profile-img:hover {
+            filter: grayscale(0%);
+            transform: rotate(5deg);
+        }
+
+        /* --- Image Overlay Fade --- */
+        .container-overlay {
+            position: relative;
+            width: 400px;
+            margin: 40px auto;
+        }
+        .main-image { width: 100%; border-radius: 20px; display: block; }
+        .fade-box {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #00b894;
+            opacity: 0;
+            transition: 0.5s ease;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-overlay:hover .fade-box { opacity: 0.9; }
+        .fade-text { color: white; font-size: 1.5rem; font-weight: bold; }
+
+        /* --- Two Column Layout --- */
+        .split-section {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .col-left, .col-right {
+            flex: 1;
+            height: 300px; /* Specific height */
+            padding: 30px;
+            border-radius: 20px;
+            color: #2d3436; /* Font color */
+        }
+        .col-left { background-color: #55efc4; }
+        .col-right { background-color: #fab1a0; }
+
+        /* --- Hover Paragraph --- */
+        .magic-text {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 50px;
+            color: #636e72;
+            transition: all 0.4s;
+        }
+        .magic-text:hover {
+            color: #00b894;
+            transform: scale(1.1);
+            text-shadow: 2px 2px #dfe6e9;
+        }
+
+        /* --- Table Styling --- */
+        .table-wrap { padding: 50px 0; }
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 5px double #2d3436; /* Border */
+            background: white;
+        }
+        td, th {
+            padding: 20px; /* Padding */
+            border: 1px solid #dfe6e9;
+        }
+        tr:first-child {
+            background-color: #2d3436; /* Top row background */
+            color: #55efc4;
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            background: #2d3436;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center; /* Centered */
+        }
+        footer b { display: block; margin-top: 10px; } /* Bold via footer styling */
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2026/04/08/345244_large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Sitnoor's Portfolio</h1>
+            <p>Designing Tomorrow, Today.</p>
+        </div>
+    </section>
+
+    <section class="profile-box" id="about">
+        <h2>The Architect</h2>
+        <img src="https://images.pexels.com/photos/1181290/pexels-photo-1181290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sitnoor" class="profile-img">
+        <p class="magic-text">"Innovation distinguishes between a leader and a follower." (Hover me!)</p>
+    </section>
+
+    <section class="split-section">
+        <div class="col-left">
+            <h3>Philosophy</h3>
+            <p>I believe in clean lines, sustainable code, and user-centric design that feels as natural as a garden.</p>
+        </div>
+        <div class="col-right">
+            <h3>Mission</h3>
+            <p>To bridge the gap between complex technology and human emotion through beautiful interfaces.</p>
+        </div>
+    </section>
+
+    <div class="container-overlay" id="work">
+        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600" class="main-image" alt="Project">
+        <div class="fade-box">
+            <div class="fade-text">View Latest Project</div>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <tr>
+                <th>Expertise</th>
+                <th>Level</th>
+                <th>Experience</th>
+            </tr>
+            <tr>
+                <td>HTML5/CSS3</td>
+                <td>Advanced</td>
+                <td>1 month</td>
+            </tr>
+            <tr>
+                <td>UI Design</td>
+                <td>Intermediate</td>
+                <td>1 week</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Advanced</td>
+                <td>1 week</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Design by Sitnoor &copy; 2026</p>
+        <b>Crafted with Precision & Code.</b>
+    </footer>
+
+</body>
+</html>
